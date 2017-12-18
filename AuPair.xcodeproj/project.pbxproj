@@ -21,6 +21,7 @@
 		ABF9086F1FE82A0A00446C9A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9086D1FE82A0A00446C9A /* LoginController.swift */; };
 		ABF908711FE82A8D00446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908701FE82A8D00446C9A /* HomeController.swift */; };
 		ABF908721FE82A8D00446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908701FE82A8D00446C9A /* HomeController.swift */; };
+		ABF908741FE841A400446C9A /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908731FE841A400446C9A /* RegisterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		ABF908691FE8209100446C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABF9086D1FE82A0A00446C9A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		ABF908701FE82A8D00446C9A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		ABF908731FE841A400446C9A /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		BA5F45C00B9D0C862ABDF366 /* Pods-AuPair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuPair.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuPair/Pods-AuPair.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				AB8A01BF1FE7FEE600B02519 /* WelcomeController.swift */,
 				ABF9086D1FE82A0A00446C9A /* LoginController.swift */,
 				ABF908701FE82A8D00446C9A /* HomeController.swift */,
+				ABF908731FE841A400446C9A /* RegisterController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF908741FE841A400446C9A /* RegisterController.swift in Sources */,
 				ABF908711FE82A8D00446C9A /* HomeController.swift in Sources */,
 				AB8A01C01FE7FEE600B02519 /* WelcomeController.swift in Sources */,
 				ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */,

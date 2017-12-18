@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  RegisterController.swift
 //  AuPair
 //
 //  Created by Jonathan on 18/12/2017.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class RegisterController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     /*
     // MARK: - Navigation
 
