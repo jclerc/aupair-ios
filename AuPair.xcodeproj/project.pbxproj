@@ -15,8 +15,8 @@
 		AB8A01C51FE7FEE600B02519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8A01C41FE7FEE600B02519 /* Assets.xcassets */; };
 		AB8A01C81FE7FEE600B02519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A01C61FE7FEE600B02519 /* LaunchScreen.storyboard */; };
 		AB8A01D31FE7FEE600B02519 /* AuPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A01D21FE7FEE600B02519 /* AuPairTests.swift */; };
-		AB8A01DE1FE801F200B02519 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8A01DD1FE801F200B02519 /* GoogleService-Info.plist */; };
-		AB8A01DF1FE801F200B02519 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8A01DD1FE801F200B02519 /* GoogleService-Info.plist */; };
+		ABF9086A1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
+		ABF9086B1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		AB8A01CE1FE7FEE600B02519 /* AuPairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuPairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8A01D21FE7FEE600B02519 /* AuPairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuPairTests.swift; sourceTree = "<group>"; };
 		AB8A01D41FE7FEE600B02519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB8A01DD1FE801F200B02519 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABF908691FE8209100446C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA5F45C00B9D0C862ABDF366 /* Pods-AuPair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuPair.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuPair/Pods-AuPair.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +107,7 @@
 				AB8A01C41FE7FEE600B02519 /* Assets.xcassets */,
 				AB8A01C61FE7FEE600B02519 /* LaunchScreen.storyboard */,
 				AB8A01C91FE7FEE600B02519 /* Info.plist */,
-				AB8A01DD1FE801F200B02519 /* GoogleService-Info.plist */,
+				ABF908691FE8209100446C9A /* GoogleService-Info.plist */,
 			);
 			path = AuPair;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8A01C81FE7FEE600B02519 /* LaunchScreen.storyboard in Resources */,
-				AB8A01DE1FE801F200B02519 /* GoogleService-Info.plist in Resources */,
+				ABF9086A1FE8209200446C9A /* GoogleService-Info.plist in Resources */,
 				AB8A01C51FE7FEE600B02519 /* Assets.xcassets in Resources */,
 				AB8A01C31FE7FEE600B02519 /* Main.storyboard in Resources */,
 			);
@@ -232,7 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB8A01DF1FE801F200B02519 /* GoogleService-Info.plist in Resources */,
+				ABF9086B1FE8209200446C9A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
