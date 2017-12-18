@@ -10,13 +10,17 @@
 		43EEE436C467D2386BA39D35 /* Pods_AuPair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A029AB49574F1D8404B9DD /* Pods_AuPair.framework */; };
 		8D88D4EF8D807A718D5FD078 /* Pods_AuPairTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9586D404EB4A853983AB6D4 /* Pods_AuPairTests.framework */; };
 		AB8A01BE1FE7FEE600B02519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A01BD1FE7FEE600B02519 /* AppDelegate.swift */; };
-		AB8A01C01FE7FEE600B02519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A01BF1FE7FEE600B02519 /* ViewController.swift */; };
+		AB8A01C01FE7FEE600B02519 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A01BF1FE7FEE600B02519 /* WelcomeController.swift */; };
 		AB8A01C31FE7FEE600B02519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A01C11FE7FEE600B02519 /* Main.storyboard */; };
 		AB8A01C51FE7FEE600B02519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8A01C41FE7FEE600B02519 /* Assets.xcassets */; };
 		AB8A01C81FE7FEE600B02519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A01C61FE7FEE600B02519 /* LaunchScreen.storyboard */; };
 		AB8A01D31FE7FEE600B02519 /* AuPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A01D21FE7FEE600B02519 /* AuPairTests.swift */; };
 		ABF9086A1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
 		ABF9086B1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
+		ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9086D1FE82A0A00446C9A /* LoginController.swift */; };
+		ABF9086F1FE82A0A00446C9A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9086D1FE82A0A00446C9A /* LoginController.swift */; };
+		ABF908711FE82A8D00446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908701FE82A8D00446C9A /* HomeController.swift */; };
+		ABF908721FE82A8D00446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908701FE82A8D00446C9A /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,7 @@
 		A9586D404EB4A853983AB6D4 /* Pods_AuPairTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuPairTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8A01BA1FE7FEE600B02519 /* AuPair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuPair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8A01BD1FE7FEE600B02519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB8A01BF1FE7FEE600B02519 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB8A01BF1FE7FEE600B02519 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		AB8A01C21FE7FEE600B02519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB8A01C41FE7FEE600B02519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB8A01C71FE7FEE600B02519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +50,8 @@
 		AB8A01D21FE7FEE600B02519 /* AuPairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuPairTests.swift; sourceTree = "<group>"; };
 		AB8A01D41FE7FEE600B02519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF908691FE8209100446C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABF9086D1FE82A0A00446C9A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		ABF908701FE82A8D00446C9A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		BA5F45C00B9D0C862ABDF366 /* Pods-AuPair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuPair.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuPair/Pods-AuPair.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				AB8A01BD1FE7FEE600B02519 /* AppDelegate.swift */,
-				AB8A01BF1FE7FEE600B02519 /* ViewController.swift */,
+				ABF9086C1FE8291D00446C9A /* Controllers */,
 				AB8A01C11FE7FEE600B02519 /* Main.storyboard */,
 				AB8A01C41FE7FEE600B02519 /* Assets.xcassets */,
 				AB8A01C61FE7FEE600B02519 /* LaunchScreen.storyboard */,
@@ -119,6 +125,16 @@
 				AB8A01D41FE7FEE600B02519 /* Info.plist */,
 			);
 			path = AuPairTests;
+			sourceTree = "<group>";
+		};
+		ABF9086C1FE8291D00446C9A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB8A01BF1FE7FEE600B02519 /* WelcomeController.swift */,
+				ABF9086D1FE82A0A00446C9A /* LoginController.swift */,
+				ABF908701FE82A8D00446C9A /* HomeController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		B672AC032675F6084F5D845C /* Pods */ = {
@@ -246,11 +262,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AuPair/Pods-AuPair-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -347,7 +365,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB8A01C01FE7FEE600B02519 /* ViewController.swift in Sources */,
+				ABF908711FE82A8D00446C9A /* HomeController.swift in Sources */,
+				AB8A01C01FE7FEE600B02519 /* WelcomeController.swift in Sources */,
+				ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */,
 				AB8A01BE1FE7FEE600B02519 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +377,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8A01D31FE7FEE600B02519 /* AuPairTests.swift in Sources */,
+				ABF9086F1FE82A0A00446C9A /* LoginController.swift in Sources */,
+				ABF908721FE82A8D00446C9A /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
