@@ -38,13 +38,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BE-Jh-Qio">
-                                <rect key="frame" x="50" y="511" width="275" height="50"/>
-                                <color key="backgroundColor" red="0.47450980390000003" green="0.76078431369999999" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="50" y="492.5" width="275" height="68.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Mry-2B-orS"/>
+                                    <constraint firstAttribute="width" secondItem="9BE-Jh-Qio" secondAttribute="height" multiplier="4:1" id="lkI-hA-c1D"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="17"/>
-                                <state key="normal" title="Je suis une famille">
+                                <state key="normal" title="Je suis une famille" backgroundImage="gradient-family">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -57,13 +56,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQf-c9-7rw">
-                                <rect key="frame" x="50" y="441" width="275" height="50"/>
-                                <color key="backgroundColor" red="0.99215686270000003" green="0.65098039220000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="50" y="403.5" width="275" height="69"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="6aO-kG-Lh4"/>
+                                    <constraint firstAttribute="width" secondItem="nQf-c9-7rw" secondAttribute="height" multiplier="4:1" id="yWr-j7-FeI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="17"/>
-                                <state key="normal" title="Je suis au pair">
+                                <state key="normal" title="Je suis au pair" backgroundImage="gradient-aupair">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -631,6 +629,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gradient-aupair" width="240" height="60"/>
+        <image name="gradient-family" width="240" height="60"/>
         <image name="logo" width="1660" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
