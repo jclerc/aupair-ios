@@ -8,6 +8,9 @@ target 'AuPair' do
   # Pods for AuPair
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'DatePickerDialog'
+  pod 'NextResponderTextField'
+  pod 'TPKeyboardAvoiding'
 
   target 'AuPairTests' do
     inherit! :search_paths

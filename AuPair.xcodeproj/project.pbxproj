@@ -21,7 +21,9 @@
 		ABF9086F1FE82A0A00446C9A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9086D1FE82A0A00446C9A /* LoginController.swift */; };
 		ABF908711FE82A8D00446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908701FE82A8D00446C9A /* HomeController.swift */; };
 		ABF908721FE82A8D00446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908701FE82A8D00446C9A /* HomeController.swift */; };
-		ABF908741FE841A400446C9A /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908731FE841A400446C9A /* RegisterController.swift */; };
+		ABF908771FE9C55B00446C9A /* RegisterAuPair1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908761FE9C55B00446C9A /* RegisterAuPair1Controller.swift */; };
+		ABF908791FE9C64700446C9A /* RegisterAuPair2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908781FE9C64700446C9A /* RegisterAuPair2Controller.swift */; };
+		ABF9087B1FE9C65200446C9A /* RegisterAuPair3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9087A1FE9C65200446C9A /* RegisterAuPair3Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +55,9 @@
 		ABF908691FE8209100446C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABF9086D1FE82A0A00446C9A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		ABF908701FE82A8D00446C9A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		ABF908731FE841A400446C9A /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		ABF908761FE9C55B00446C9A /* RegisterAuPair1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuPair1Controller.swift; sourceTree = "<group>"; };
+		ABF908781FE9C64700446C9A /* RegisterAuPair2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuPair2Controller.swift; sourceTree = "<group>"; };
+		ABF9087A1FE9C65200446C9A /* RegisterAuPair3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuPair3Controller.swift; sourceTree = "<group>"; };
 		BA5F45C00B9D0C862ABDF366 /* Pods-AuPair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuPair.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuPair/Pods-AuPair.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,12 +136,22 @@
 		ABF9086C1FE8291D00446C9A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ABF908751FE9C4C500446C9A /* Register */,
 				AB8A01BF1FE7FEE600B02519 /* WelcomeController.swift */,
 				ABF9086D1FE82A0A00446C9A /* LoginController.swift */,
 				ABF908701FE82A8D00446C9A /* HomeController.swift */,
-				ABF908731FE841A400446C9A /* RegisterController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ABF908751FE9C4C500446C9A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				ABF908761FE9C55B00446C9A /* RegisterAuPair1Controller.swift */,
+				ABF9087A1FE9C65200446C9A /* RegisterAuPair3Controller.swift */,
+				ABF908781FE9C64700446C9A /* RegisterAuPair2Controller.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		B672AC032675F6084F5D845C /* Pods */ = {
@@ -265,14 +279,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AuPair/Pods-AuPair-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DatePickerDialog/DatePickerDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/NextResponderTextField/NextResponderTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NextResponderTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,9 +388,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABF908741FE841A400446C9A /* RegisterController.swift in Sources */,
 				ABF908711FE82A8D00446C9A /* HomeController.swift in Sources */,
+				ABF908771FE9C55B00446C9A /* RegisterAuPair1Controller.swift in Sources */,
 				AB8A01C01FE7FEE600B02519 /* WelcomeController.swift in Sources */,
+				ABF9087B1FE9C65200446C9A /* RegisterAuPair3Controller.swift in Sources */,
+				ABF908791FE9C64700446C9A /* RegisterAuPair2Controller.swift in Sources */,
 				ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */,
 				AB8A01BE1FE7FEE600B02519 /* AppDelegate.swift in Sources */,
 			);
