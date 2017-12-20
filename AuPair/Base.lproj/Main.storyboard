@@ -316,7 +316,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Suivant" id="Ix3-ef-bzl">
                             <connections>
-                                <segue destination="AGV-WJ-jUl" kind="show" id="gvJ-sX-N18"/>
+                                <action selector="tryNext:" destination="OV7-rx-o0z" id="0kZ-hA-7go"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -338,33 +338,33 @@
         <!--Ton sourire-->
         <scene sceneID="h3f-JG-dXn">
             <objects>
-                <viewController id="AGV-WJ-jUl" customClass="RegisterAuPair2Controller" customModule="AuPair" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterAuPair2" id="AGV-WJ-jUl" customClass="RegisterAuPair2Controller" customModule="AuPair" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OvR-pY-eDO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ton sourire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZR-93-FsM">
-                                <rect key="frame" x="32" y="96" width="311" height="39"/>
+                                <rect key="frame" x="32" y="52" width="311" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MC8-Gd-QYx">
-                                <rect key="frame" x="32" y="167" width="311" height="311"/>
+                                <rect key="frame" x="32" y="123" width="311" height="311"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.67843137249999996" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MC8-Gd-QYx" secondAttribute="height" multiplier="1:1" id="XXB-IE-8vZ"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TBj-tM-DCT">
-                                <rect key="frame" x="32" y="494" width="141" height="141"/>
+                                <rect key="frame" x="32" y="450" width="185" height="185"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.67843137249999996" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TBj-tM-DCT" secondAttribute="height" multiplier="1:1" id="Kan-1F-Lwo"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1oZ-Xd-0If">
-                                <rect key="frame" x="202" y="494" width="141" height="141"/>
+                                <rect key="frame" x="158" y="450" width="185" height="185"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.67843137249999996" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1oZ-Xd-0If" secondAttribute="height" multiplier="1:1" id="Sxh-4U-J17"/>
@@ -391,7 +391,7 @@
                     <navigationItem key="navigationItem" title="Ton sourire" id="Yny-0Y-6w7">
                         <barButtonItem key="rightBarButtonItem" title="Suivant" id="SId-ih-Zca">
                             <connections>
-                                <segue destination="BOH-pC-B9a" kind="show" id="X95-Lf-kif"/>
+                                <action selector="tryNext:" destination="AGV-WJ-jUl" id="PMM-sY-ssv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -403,37 +403,37 @@
         <!--Tes envies-->
         <scene sceneID="kd4-k3-gme">
             <objects>
-                <viewController id="BOH-pC-B9a" customClass="RegisterAuPair3Controller" customModule="AuPair" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterAuPair3" id="BOH-pC-B9a" customClass="RegisterAuPair3Controller" customModule="AuPair" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P76-J9-NzQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tes envies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTl-6u-LbH">
-                                <rect key="frame" x="32" y="96" width="311" height="38.5"/>
+                                <rect key="frame" x="32" y="52" width="311" height="38.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pays" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hY-Hi-dJl">
-                                <rect key="frame" x="32" y="203" width="311" height="30"/>
+                                <rect key="frame" x="32" y="159" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pays préféré" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z07-6I-m5D">
-                                <rect key="frame" x="32" y="166.5" width="311" height="20.5"/>
+                                <rect key="frame" x="32" y="122.5" width="311" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taille de ville souhaitée" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E57-EY-9Og">
-                                <rect key="frame" x="32" y="265" width="311" height="20.5"/>
+                                <rect key="frame" x="32" y="221" width="311" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Xe3-ZQ-y4l">
-                                <rect key="frame" x="32" y="301.5" width="311" height="29"/>
+                                <rect key="frame" x="32" y="257.5" width="311" height="29"/>
                                 <segments>
                                     <segment title="Petite"/>
                                     <segment title="Moyenne"/>
@@ -441,7 +441,7 @@
                                 </segments>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="y42-7w-L10">
-                                <rect key="frame" x="32" y="361.5" width="311" height="98"/>
+                                <rect key="frame" x="32" y="317.5" width="311" height="98"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2M7-fX-7g7">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="30"/>
@@ -533,12 +533,16 @@
                         <viewLayoutGuide key="safeArea" id="2gQ-Vv-7kF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tes envies" id="4ks-Lq-biz">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Valider" id="vna-lb-Znk"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Valider" id="vna-lb-Znk">
+                            <connections>
+                                <action selector="tryNext:" destination="BOH-pC-B9a" id="bIx-Gs-UbU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYc-S3-2EG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3424.8000000000002" y="32.833583208395808"/>
+            <point key="canvasLocation" x="3396" y="33"/>
         </scene>
         <!--Home Controller-->
         <scene sceneID="QEn-uc-Hon">

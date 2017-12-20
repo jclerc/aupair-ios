@@ -10,7 +10,7 @@ import UIKit
 import DatePickerDialog
 import NextResponderTextField
 
-class RegisterAuPair1Controller: UIViewController, UITextFieldDelegate {
+class RegisterAuPair1Controller: FormViewController, UITextFieldDelegate, FormViewHelper {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -23,9 +23,11 @@ class RegisterAuPair1Controller: UIViewController, UITextFieldDelegate {
     var dateFormatter: DateFormatter!
     var selectedDate: Date? = Date()
     var pickerOpened = false
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initForm(self, [emailField, passwordField, confirmField, firstnameField, lastnameField, birthdateField, countryField])
         
         // Set date formatter
         dateFormatter = DateFormatter()
@@ -35,14 +37,9 @@ class RegisterAuPair1Controller: UIViewController, UITextFieldDelegate {
         
         // To open picker
         birthdateField.delegate = self
-        
-        // Update next button
-        self.updateNext()
     }
     
-    func updateNext() {
-//        self.navigationItem.rightBarButtonItem?.isEnabled = false
-        
+    @IBAction func tryNext(_ sender: Any) {
         guard let email = emailField.text, email.count > 5 && email.contains("@") else {
             wrongField(message: "L'email est incorrect.", input: emailField)
             return
@@ -54,7 +51,7 @@ class RegisterAuPair1Controller: UIViewController, UITextFieldDelegate {
         }
         
         guard let confirm = confirmField.text, confirm == password else {
-            wrongField(message: "La confirmation est différente du mot de passe.", input: passwordField)
+            wrongField(message: "La confirmation est différente du mot de passe.", input: confirmField)
             return
         }
         
@@ -78,7 +75,13 @@ class RegisterAuPair1Controller: UIViewController, UITextFieldDelegate {
             return
         }
         
-        self.navigationItem.rightBarButtonItem?.isEnabled = true
+        if let view = storyboard?.instantiateViewController(withIdentifier: "RegisterAuPair2") as? RegisterAuPair2Controller {
+            navigationController?.pushViewController(view, animated: true)
+        }
+    }
+    
+    func updateSubmit(state: Bool) {
+        self.navigationItem.rightBarButtonItem?.isEnabled = state
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {

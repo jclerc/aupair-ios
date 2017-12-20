@@ -15,6 +15,10 @@ class RegisterAuPair3Controller: UIViewController {
         self.navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
+    @IBAction func tryNext(_ sender: Any) {
+        print("try register")
+    }
+
     func updateNext() {
         self.navigationItem.rightBarButtonItem?.isEnabled = true
     }

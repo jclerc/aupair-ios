@@ -15,6 +15,12 @@ class RegisterAuPair2Controller: UIViewController {
         self.navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
+    @IBAction func tryNext(_ sender: Any) {
+        if let view = storyboard?.instantiateViewController(withIdentifier: "RegisterAuPair3") {
+            navigationController?.pushViewController(view, animated: true)
+        }
+    }
+
     func updateNext() {
         self.navigationItem.rightBarButtonItem?.isEnabled = true
     }

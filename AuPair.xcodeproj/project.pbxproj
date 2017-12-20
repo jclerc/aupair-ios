@@ -24,6 +24,7 @@
 		ABF908771FE9C55B00446C9A /* RegisterAuPair1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908761FE9C55B00446C9A /* RegisterAuPair1Controller.swift */; };
 		ABF908791FE9C64700446C9A /* RegisterAuPair2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908781FE9C64700446C9A /* RegisterAuPair2Controller.swift */; };
 		ABF9087B1FE9C65200446C9A /* RegisterAuPair3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9087A1FE9C65200446C9A /* RegisterAuPair3Controller.swift */; };
+		ABF9087D1FEA8A9F00446C9A /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9087C1FEA8A9F00446C9A /* FormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		ABF908761FE9C55B00446C9A /* RegisterAuPair1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuPair1Controller.swift; sourceTree = "<group>"; };
 		ABF908781FE9C64700446C9A /* RegisterAuPair2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuPair2Controller.swift; sourceTree = "<group>"; };
 		ABF9087A1FE9C65200446C9A /* RegisterAuPair3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuPair3Controller.swift; sourceTree = "<group>"; };
+		ABF9087C1FEA8A9F00446C9A /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		BA5F45C00B9D0C862ABDF366 /* Pods-AuPair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuPair.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuPair/Pods-AuPair.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 				ABF908761FE9C55B00446C9A /* RegisterAuPair1Controller.swift */,
 				ABF9087A1FE9C65200446C9A /* RegisterAuPair3Controller.swift */,
 				ABF908781FE9C64700446C9A /* RegisterAuPair2Controller.swift */,
+				ABF9087C1FEA8A9F00446C9A /* FormViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				ABF9087B1FE9C65200446C9A /* RegisterAuPair3Controller.swift in Sources */,
 				ABF908791FE9C64700446C9A /* RegisterAuPair2Controller.swift in Sources */,
 				ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */,
+				ABF9087D1FEA8A9F00446C9A /* FormViewController.swift in Sources */,
 				AB8A01BE1FE7FEE600B02519 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
