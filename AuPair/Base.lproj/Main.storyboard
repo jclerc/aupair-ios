@@ -10,6 +10,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bariol_Bold.otf">
+            <string>Bariol-Bold</string>
+        </array>
+        <array key="Bariol_Regular.otf">
+            <string>Bariol-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Welcome Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -20,22 +28,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQh-03-maY">
-                                <rect key="frame" x="150" y="585" width="75" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <rect key="frame" x="153.5" y="581" width="68" height="29"/>
+                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="17"/>
                                 <state key="normal" title="connexion">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="eJQ-F6-ces" kind="show" id="yf8-mb-3sZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BE-Jh-Qio">
-                                <rect key="frame" x="50" y="515" width="275" height="50"/>
+                                <rect key="frame" x="50" y="511" width="275" height="50"/>
                                 <color key="backgroundColor" red="0.47450980390000003" green="0.76078431369999999" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Mry-2B-orS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="17"/>
                                 <state key="normal" title="Je suis une famille">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,12 +57,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQf-c9-7rw">
-                                <rect key="frame" x="50" y="445" width="275" height="50"/>
+                                <rect key="frame" x="50" y="441" width="275" height="50"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.65098039220000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6aO-kG-Lh4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="17"/>
                                 <state key="normal" title="Je suis au pair">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -67,53 +75,52 @@
                                     <segue destination="Ytr-DF-66c" kind="show" id="Q1Q-hd-MeE"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BtF-HN-xcG">
-                                <rect key="frame" x="0.0" y="84" width="375" height="72"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="koo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O9-eP-ewN">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="72"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="60"/>
-                                        <color key="textColor" red="0.99215686274509807" green="0.65098039215686276" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="koo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yew-Nx-z4x">
-                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="72"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="60"/>
-                                        <color key="textColor" red="0.47450980392156861" green="0.76078431372549016" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La solution de contact entre familles et jeunes au pair !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCC-s1-uH7">
-                                <rect key="frame" x="32" y="172" width="311" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="32" y="175" width="311" height="34"/>
+                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="17"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1a1-AB-iUV">
+                                <rect key="frame" x="32" y="84" width="311" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1a1-AB-iUV" secondAttribute="height" multiplier="83:20" id="j4Y-kn-9cC"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxn-bT-P58">
+                                <rect key="frame" x="172" y="606" width="30" height="1"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.047058823530000002" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="8wq-vd-9Ww"/>
+                                    <constraint firstAttribute="height" constant="1" id="ptz-XE-hmg"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Zxn-bT-P58" firstAttribute="top" secondItem="lQh-03-maY" secondAttribute="bottom" constant="-4" id="3Rf-yx-Qn5"/>
                             <constraint firstItem="lQh-03-maY" firstAttribute="top" secondItem="9BE-Jh-Qio" secondAttribute="bottom" constant="20" id="3jH-CJ-MUp"/>
                             <constraint firstItem="nQf-c9-7rw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="4Tr-UI-zxo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9BE-Jh-Qio" secondAttribute="trailing" constant="50" id="7mN-F9-5E5"/>
-                            <constraint firstItem="eCC-s1-uH7" firstAttribute="top" secondItem="BtF-HN-xcG" secondAttribute="bottom" constant="16" id="BKQ-Qv-bCT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zxn-bT-P58" secondAttribute="bottom" constant="60" id="AD3-El-LTl"/>
+                            <constraint firstItem="Zxn-bT-P58" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BL6-Ap-UBG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eCC-s1-uH7" secondAttribute="trailing" constant="32" id="J2P-hm-YDf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lQh-03-maY" secondAttribute="bottom" constant="50" id="R12-uy-aUK"/>
-                            <constraint firstItem="BtF-HN-xcG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="XEh-TA-e1g"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BtF-HN-xcG" secondAttribute="trailing" id="cKF-n4-qYk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1a1-AB-iUV" secondAttribute="trailing" constant="32" id="Qs4-jO-ekZ"/>
                             <constraint firstItem="lQh-03-maY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eTt-nq-iYi"/>
                             <constraint firstItem="9BE-Jh-Qio" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="fL4-B7-cXd"/>
-                            <constraint firstItem="BtF-HN-xcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oHJ-jJ-mgi"/>
+                            <constraint firstItem="1a1-AB-iUV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="hrE-7Q-tAQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nQf-c9-7rw" secondAttribute="trailing" constant="50" id="oyo-aj-n9E"/>
+                            <constraint firstItem="1a1-AB-iUV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="siG-z7-fCE"/>
                             <constraint firstItem="9BE-Jh-Qio" firstAttribute="top" secondItem="nQf-c9-7rw" secondAttribute="bottom" constant="20" id="vBj-M9-cl4"/>
                             <constraint firstItem="eCC-s1-uH7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="yKE-tF-fel"/>
+                            <constraint firstItem="eCC-s1-uH7" firstAttribute="top" secondItem="1a1-AB-iUV" secondAttribute="bottom" constant="16" id="ySr-Wq-2JR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="33"/>
+            <point key="canvasLocation" x="204" y="31.934032983508249"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="vka-U3-Gtb">
@@ -623,6 +630,9 @@
             <point key="canvasLocation" x="988.79999999999995" y="32.383808095952027"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="1660" height="400"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ehv-F7-Sdy"/>
     </inferredMetricsTieBreakers>

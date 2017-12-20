@@ -21,6 +21,8 @@
 		ABF9086F1FE82A0A00446C9A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9086D1FE82A0A00446C9A /* LoginController.swift */; };
 		ABF908711FE82A8D00446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908701FE82A8D00446C9A /* HomeController.swift */; };
 		ABF908721FE82A8D00446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908701FE82A8D00446C9A /* HomeController.swift */; };
+		ABF908801FEABB8F00446C9A /* Bariol_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABF9087F1FEABB8D00446C9A /* Bariol_Bold.otf */; };
+		ABF908821FEABC1F00446C9A /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABF908811FEABC1E00446C9A /* Bariol_Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		ABF908691FE8209100446C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABF9086D1FE82A0A00446C9A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		ABF908701FE82A8D00446C9A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		ABF9087F1FEABB8D00446C9A /* Bariol_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Bold.otf; sourceTree = "<group>"; };
+		ABF908811FEABC1E00446C9A /* Bariol_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular.otf; sourceTree = "<group>"; };
 		BA5F45C00B9D0C862ABDF366 /* Pods-AuPair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuPair.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuPair/Pods-AuPair.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +111,7 @@
 		AB8A01BC1FE7FEE600B02519 /* AuPair */ = {
 			isa = PBXGroup;
 			children = (
+				ABF9087E1FEAB9D300446C9A /* Fonts */,
 				AB8A01BD1FE7FEE600B02519 /* AppDelegate.swift */,
 				ABF9086C1FE8291D00446C9A /* Controllers */,
 				AB8A01C11FE7FEE600B02519 /* Main.storyboard */,
@@ -135,6 +140,15 @@
 				ABF908701FE82A8D00446C9A /* HomeController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ABF9087E1FEAB9D300446C9A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ABF9087F1FEABB8D00446C9A /* Bariol_Bold.otf */,
+				ABF908811FEABC1E00446C9A /* Bariol_Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		B672AC032675F6084F5D845C /* Pods */ = {
@@ -240,7 +254,9 @@
 				AB8A01C81FE7FEE600B02519 /* LaunchScreen.storyboard in Resources */,
 				ABF9086A1FE8209200446C9A /* GoogleService-Info.plist in Resources */,
 				AB8A01C51FE7FEE600B02519 /* Assets.xcassets in Resources */,
+				ABF908821FEABC1F00446C9A /* Bariol_Regular.otf in Resources */,
 				AB8A01C31FE7FEE600B02519 /* Main.storyboard in Resources */,
+				ABF908801FEABB8F00446C9A /* Bariol_Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
