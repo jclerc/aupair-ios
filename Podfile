@@ -11,6 +11,7 @@ target 'AuPair' do
   pod 'DatePickerDialog'
   pod 'NextResponderTextField'
   pod 'TPKeyboardAvoiding'
+  pod 'Koloda'
 
   target 'AuPairTests' do
     inherit! :search_paths

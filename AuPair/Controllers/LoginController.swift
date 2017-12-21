@@ -23,8 +23,13 @@ class LoginController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if (error == nil) {
                     print("Successfully logged in")
-                    if let view = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeController {
-                        self.present(view, animated: true, completion: nil)
+                    if let tabBar = self.storyboard?.instantiateViewController(withIdentifier: "TabBar") as? TabBarController {
+                        tabBar.selectedIndex = 1
+                        self.present(tabBar, animated: true, completion: {
+//                            if let view = self.storyboard?.instantiateViewController(withIdentifier: "Home") {
+//                                tabBar.present(view, animated: true, completion: nil)
+//                            }
+                        })
                     }
                 } else {
                     print("Invalid credentials provided")

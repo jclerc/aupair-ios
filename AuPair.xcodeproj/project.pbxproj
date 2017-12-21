@@ -19,10 +19,10 @@
 		ABF9086B1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
 		ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9086D1FE82A0A00446C9A /* LoginController.swift */; };
 		ABF9086F1FE82A0A00446C9A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9086D1FE82A0A00446C9A /* LoginController.swift */; };
-		ABF908711FE82A8D00446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908701FE82A8D00446C9A /* HomeController.swift */; };
-		ABF908721FE82A8D00446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908701FE82A8D00446C9A /* HomeController.swift */; };
 		ABF908801FEABB8F00446C9A /* Bariol_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABF9087F1FEABB8D00446C9A /* Bariol_Bold.otf */; };
 		ABF908821FEABC1F00446C9A /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABF908811FEABC1E00446C9A /* Bariol_Regular.otf */; };
+		ABF908841FEAD93F00446C9A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908831FEAD93F00446C9A /* TabBarController.swift */; };
+		ABF908861FEADD2600446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908851FEADD2600446C9A /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +53,10 @@
 		AB8A01D41FE7FEE600B02519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF908691FE8209100446C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABF9086D1FE82A0A00446C9A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		ABF908701FE82A8D00446C9A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		ABF9087F1FEABB8D00446C9A /* Bariol_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Bold.otf; sourceTree = "<group>"; };
 		ABF908811FEABC1E00446C9A /* Bariol_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular.otf; sourceTree = "<group>"; };
+		ABF908831FEAD93F00446C9A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		ABF908851FEADD2600446C9A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		BA5F45C00B9D0C862ABDF366 /* Pods-AuPair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuPair.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuPair/Pods-AuPair.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +138,8 @@
 			children = (
 				AB8A01BF1FE7FEE600B02519 /* WelcomeController.swift */,
 				ABF9086D1FE82A0A00446C9A /* LoginController.swift */,
-				ABF908701FE82A8D00446C9A /* HomeController.swift */,
+				ABF908831FEAD93F00446C9A /* TabBarController.swift */,
+				ABF908851FEADD2600446C9A /* HomeController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,18 +283,22 @@
 				"${BUILT_PRODUCTS_DIR}/DatePickerDialog/DatePickerDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
 				"${BUILT_PRODUCTS_DIR}/NextResponderTextField/NextResponderTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NextResponderTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -387,10 +393,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABF908711FE82A8D00446C9A /* HomeController.swift in Sources */,
 				AB8A01C01FE7FEE600B02519 /* WelcomeController.swift in Sources */,
+				ABF908841FEAD93F00446C9A /* TabBarController.swift in Sources */,
 				ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */,
 				AB8A01BE1FE7FEE600B02519 /* AppDelegate.swift in Sources */,
+				ABF908861FEADD2600446C9A /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +407,6 @@
 			files = (
 				AB8A01D31FE7FEE600B02519 /* AuPairTests.swift in Sources */,
 				ABF9086F1FE82A0A00446C9A /* LoginController.swift in Sources */,
-				ABF908721FE82A8D00446C9A /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
