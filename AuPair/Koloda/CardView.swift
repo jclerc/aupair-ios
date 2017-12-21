@@ -9,9 +9,9 @@
 import UIKit
 import Koloda
 
-class CardView: KolodaView {
+class CardView: UIView {
     
-    var mainKolodaView: KolodaView!
+    var kolodaView: KolodaView!
     
     @IBOutlet weak var pictureImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -31,11 +31,14 @@ class CardView: KolodaView {
     @IBOutlet weak var secondActivityImage: UIImageView!
     @IBOutlet weak var secondActivityLabel: UILabel!
     
-    func setData(_ mainKolodaView: KolodaView, _ data: [String: Any]) {
-        self.mainKolodaView = mainKolodaView
-
+    func setData(_ kolodaView: KolodaView, _ data: [String: Any]) {
+        self.kolodaView = kolodaView
         self.updateLayer()
-        
+        self.update(data)
+    }
+    
+    private func update(_ data: [String: Any]) {
+        // fetch picture async
         if let picture = data["picture"] as? String, let url = URL(string: picture) {
             DispatchQueue.global().async {
                 let content = try? Data(contentsOf: url)
@@ -45,40 +48,35 @@ class CardView: KolodaView {
             }
         }
         
+        // set name
         if let firstName = data["first_name"], let lastName = data["last_name"] {
             nameLabel.text = "\(firstName) \(lastName)"
         }
         
         if let family = data["family"] as? [String: Any] {
-            
+            // set attributes
             if let verified = family["verified"] as? Bool, verified == false {
                 verifiedImage.alpha = 0
             }
-            
             if let smoker = family["smoker"] as? Bool, smoker == false {
                 smokerImage.alpha = 0
             }
-            
             if let children = family["children"] {
                 childrenLabel.text = "\(children)"
             }
-            
             if let location = family["location"] {
                 locationLabel.text = "\(location)"
             }
-            
             if let languages = family["languages"] {
                 languagesLabel.text = "\(languages)"
             }
-            
             if let dates = family["dates"] {
                 datesLabel.text = "de \(dates)"
             }
-            
             if let minimumDuration = family["minimal_duration"] {
                 minimumDurationLabel.text = "\(minimumDuration) mois minimum"
             }
-            
+            // set first two activities
             if let activities = family["activities"] as? [String: String], activities.count >= 2 {
                 var i = 0
                 for activity in activities {
@@ -103,23 +101,24 @@ class CardView: KolodaView {
         }
     }
     
-    func updateLayer() {
-        self.layer.shadowOffset = CGSize(width: 0, height: 2)
-        self.layer.shadowColor = UIColor.gray.cgColor
-        self.layer.shadowRadius = 4
-        self.layer.shadowOpacity = 0.3
-        self.layer.cornerRadius = 6
-        self.clipsToBounds = true
-        self.layer.masksToBounds = false
-        self.layer.cornerRadius = 6
+    private func updateLayer() {
+        // set shadow and border radius
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowRadius = 4
+        layer.shadowOpacity = 0.3
+        layer.cornerRadius = 6
+        clipsToBounds = true
+        layer.masksToBounds = false
+        layer.cornerRadius = 6
     }
     
     @IBAction func trySkip(_ sender: Any) {
-        mainKolodaView.swipe(.left)
+        kolodaView.swipe(.left)
     }
     
     @IBAction func tryLike(_ sender: Any) {
-        mainKolodaView.swipe(.right)
+        kolodaView.swipe(.right)
     }
     
 }

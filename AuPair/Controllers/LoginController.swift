@@ -28,12 +28,14 @@ class LoginController: UIViewController {
         if let email = emailField.text, let password = passwordField.text {
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 
-                if (error == nil) {
+                if error == nil {
+                    // login: success
                     print("Successfully logged in")
                     
                     self.ref.child("users/\(user!.uid)").observeSingleEvent(of: .value, with: { (snapshot) in
-                        // get value to track it
+                        // get user data
                         if let value = snapshot.value as? [String: Any] {
+                            // type is family:
                             if let type = value["type"] as? String, type == "family" {
                                 Analytics.setUserProperty(type, forName: "user_type")
                                 print("ANALYTICS: set user_type")
@@ -48,9 +50,11 @@ class LoginController: UIViewController {
                                     }
                                 }
                             }
+                            // type is aupair:
+                            // not implemented yet!
                         }
                         
-                        // login success
+                        // track success
                         Analytics.logEvent("login_state", parameters: [
                             "login_state": "Success"
                         ])
@@ -62,14 +66,16 @@ class LoginController: UIViewController {
                         }
                     })
                 } else {
+                    // login: fail
                     print("Invalid credentials provided")
-                    self.loginButton.isEnabled = true
                     
-                    // login failed
+                    // track fail
                     Analytics.logEvent("login_state", parameters: [
                         "login_state": "Fail"
                     ])
                     
+                    // upadte ui
+                    self.loginButton.isEnabled = true
                     let alert = UIAlertController(title: "Erreur", message: "Mauvais identifiants.", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)

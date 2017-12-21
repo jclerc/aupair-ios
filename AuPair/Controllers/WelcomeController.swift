@@ -29,7 +29,7 @@ class WelcomeController: UIViewController {
         unavailable()
     }
     
-    func unavailable() {
+    private func unavailable() {
         if let view = storyboard?.instantiateViewController(withIdentifier: "RegisterUnavailable") {
             present(view, animated: true, completion: nil)
         }

@@ -9,18 +9,18 @@
 import UIKit
 import Koloda
 
-private let overlayRightImageName = "overlay-like"
-private let overlayLeftImageName = "overlay-skip"
-
 class CustomOverlayView: OverlayView {
     @IBOutlet lazy var overlayImageView: UIImageView! = {
         [unowned self] in
         
+        // view as large as container
         var imageView = UIImageView(frame: self.bounds)
+        // prevent white screen
         imageView.isOpaque = false
         imageView.backgroundColor = UIColor.clear
         self.isOpaque = false
         self.backgroundColor = UIColor.clear
+        // add to view
         self.addSubview(imageView)
         
         return imageView
@@ -30,9 +30,9 @@ class CustomOverlayView: OverlayView {
         didSet {
             switch overlayState {
             case .left? :
-                overlayImageView.image = UIImage(named: overlayLeftImageName)
+                overlayImageView.image = UIImage(named: "overlay-skip")
             case .right? :
-                overlayImageView.image = UIImage(named: overlayRightImageName)
+                overlayImageView.image = UIImage(named: "overlay-like")
             default:
                 overlayImageView.image = nil
             }
