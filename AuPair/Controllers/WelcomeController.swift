@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class WelcomeController: UIViewController {
 
@@ -14,6 +15,26 @@ class WelcomeController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func tryRegisterAuPair(_ sender: Any) {
+        Analytics.logEvent("register_user_type", parameters: [
+            "user_type": "aupair"
+        ])
+        unavailable()
+    }
+    
+    @IBAction func tryRegisterFamily(_ sender: Any) {
+        Analytics.logEvent("register_user_type", parameters: [
+            "user_type": "family"
+        ])
+        unavailable()
+    }
+    
+    func unavailable() {
+        if let view = storyboard?.instantiateViewController(withIdentifier: "RegisterUnavailable") {
+            present(view, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func unwindToWelcome(sender: UIStoryboardSegue) {}
 
 }

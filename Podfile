@@ -8,6 +8,7 @@ target 'AuPair' do
   # Pods for AuPair
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   pod 'DatePickerDialog'
   pod 'NextResponderTextField'
   pod 'TPKeyboardAvoiding'

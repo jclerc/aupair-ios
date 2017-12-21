@@ -8,76 +8,79 @@
 
 import UIKit
 import Koloda
+import Firebase
 
 class HomeController: UIViewController {
-    @IBOutlet weak var kolodaView: KolodaView!
 
-    var images = [UIImage]()
+    var ref: DatabaseReference!
+    var cards = [[String: Any]]()
+
+    @IBOutlet weak var kolodaView: KolodaView!
+    @IBOutlet weak var kolodaLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        images.append(UIImage(named: "logo")!)
-        images.append(UIImage(named: "paperplane")!)
-        images.append(UIImage(named: "logo")!)
-        images.append(UIImage(named: "paperplane")!)
-        images.append(UIImage(named: "logo")!)
-        images.append(UIImage(named: "paperplane")!)
-        print("HomeController#viewDidLoad / img: \(images.count)")
         
+        ref = Database.database().reference()
+
+        ref.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
+            for child in snapshot.children.allObjects as! [DataSnapshot] {
+                let userUid = Auth.auth().currentUser?.uid
+                // exclude current user from cards
+                if child.key != userUid {
+                    if let value = child.value as? [String: Any] {
+                        if let type = value["type"] as? String, type == "family" {
+                            self.cards.append(value)
+                        }
+                    }
+                }
+            }
+            self.kolodaView.reloadData()
+            self.kolodaLabel.text = "Rien pour le moment !"
+        })
+
         kolodaView.dataSource = self
         kolodaView.delegate = self
-        
         kolodaView.layer.zPosition = 1
+        kolodaView.countOfVisibleCards = 2
     }
-
 }
 
 extension HomeController: KolodaViewDelegate {
-    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        koloda.reloadData()
-        print("KolodaViewDelegate#kolodaDidRunOutOfCards")
-    }
-    
-    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-//        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
-        print("KolodaViewDelegate#koloda, didSelectCartAt")
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        let data = cards[index]
+        
+        if let family = data["family"] as? [String: Any] {
+            
+            let location = family["location"];
+            let matchType = direction == .right ? "Accepted" : "Declined"
+
+            Analytics.logEvent("aupair_swipes_family", parameters: [
+                "user_id": Auth.auth().currentUser?.uid ?? "none",
+                "match_type": matchType,
+                "family_location": location ?? "none"
+            ])
+        }
     }
 }
 
 extension HomeController: KolodaViewDataSource {
-    
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-        print("KolodaViewDataSource#kolodaNumberOfCards / \(images.count)")
-        return images.count
+        return cards.count
     }
     
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
-        print("KolodaViewDataSource#kolodaSpeedThatCardShouldDrag")
         return .fast
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        print("KolodaViewDataSource#koloda, viewForCardAt / \(index < images.count ? "ok" : "empty")")
-
         let view = (Bundle.main.loadNibNamed("CardView", owner: self, options: nil)![0] as? CardView)!
-//        let view =
-        view.image = images[index]
-        
-        view.label.text = "\(index)"
-        
+        view.setData(kolodaView, cards[index])
         return view
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-        print("KolodaViewDataSource#koloda, viewForCardOverlayAt")
-        let x = Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)![0] as? OverlayView
-        if x != nil {
-            print("-> ok")
-        } else {
-            print("-> empty")
-        }
-        return x
+        return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)![0] as? OverlayView
     }
 }
 

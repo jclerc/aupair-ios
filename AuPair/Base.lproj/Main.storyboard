@@ -52,7 +52,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="D5p-sc-h4C" kind="show" id="Ehv-F7-Sdy"/>
+                                    <action selector="tryRegisterFamily:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BfO-5I-qdi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQf-c9-7rw">
@@ -70,7 +70,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Ytr-DF-66c" kind="show" id="Q1Q-hd-MeE"/>
+                                    <action selector="tryRegisterAuPair:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIF-9m-puR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La solution de contact entre familles et jeunes au pair !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCC-s1-uH7">
@@ -237,6 +237,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="WMP-xN-kZk" id="I0z-rt-zKV"/>
+                        <outlet property="loginButton" destination="1Pc-Cn-Jlz" id="eMa-KS-42s"/>
                         <outlet property="passwordField" destination="QKq-Pd-3BR" id="pnv-oq-sdS"/>
                     </connections>
                 </viewController>
@@ -390,7 +391,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AeH-ty-uRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YtH-ln-sT2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="32"/>
+            <point key="canvasLocation" x="2585" y="32"/>
         </scene>
         <!--Home Controller-->
         <scene sceneID="wQA-hs-Arx">
@@ -402,6 +403,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhR-s6-FwC" customClass="KolodaView" customModule="Koloda">
                                 <rect key="frame" x="32" y="120" width="311" height="478"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chargement..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvs-Zf-WgT">
+                                        <rect key="frame" x="32" y="228.5" width="247" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Nvs-Zf-WgT" firstAttribute="centerY" secondItem="GhR-s6-FwC" secondAttribute="centerY" id="2Af-vt-gA1"/>
+                                    <constraint firstItem="Nvs-Zf-WgT" firstAttribute="leading" relation="lessThanOrEqual" secondItem="GhR-s6-FwC" secondAttribute="leading" constant="32" id="BGW-Mj-MmJ"/>
+                                    <constraint firstItem="Nvs-Zf-WgT" firstAttribute="centerX" secondItem="GhR-s6-FwC" secondAttribute="centerX" id="klc-Pb-V29"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Nvs-Zf-WgT" secondAttribute="trailing" constant="32" id="uYt-B4-1rI"/>
+                                </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4QK-Nq-6kk">
                                 <rect key="frame" x="125.5" y="36" width="124.5" height="30"/>
@@ -435,6 +450,7 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="kolodaLabel" destination="Nvs-Zf-WgT" id="WXm-GK-HIC"/>
                         <outlet property="kolodaView" destination="GhR-s6-FwC" id="lfF-Ct-1dB"/>
                     </connections>
                 </viewController>
@@ -478,15 +494,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VML-EL-lrY">
-                                <rect key="frame" x="100" y="78" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bientôt disponible !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VML-EL-lrY">
+                                <rect key="frame" x="32" y="148" width="311" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VML-EL-lrY" firstAttribute="top" secondItem="nSw-a5-fH0" secondAttribute="top" constant="128" id="1mc-Jl-b7X"/>
+                            <constraint firstItem="VML-EL-lrY" firstAttribute="leading" secondItem="nSw-a5-fH0" secondAttribute="leading" constant="32" id="1sP-Gh-xAE"/>
+                            <constraint firstItem="nSw-a5-fH0" firstAttribute="trailing" secondItem="VML-EL-lrY" secondAttribute="trailing" constant="32" id="8pE-hi-7gb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nSw-a5-fH0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="profile" id="wwc-X6-YjY">
@@ -580,7 +600,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8c0-8v-uhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576.8000000000002" y="32.833583208395808"/>
+            <point key="canvasLocation" x="3401" y="33"/>
         </scene>
         <!--Tes envies-->
         <scene sceneID="kd4-k3-gme">
@@ -725,7 +745,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYc-S3-2EG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3396" y="33"/>
+            <point key="canvasLocation" x="4220" y="33"/>
         </scene>
         <!--Inscription-->
         <scene sceneID="gai-LC-ypg">
@@ -736,13 +756,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L'inscription n'est pas encore fonctionnelle..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSd-E9-9ju">
-                                <rect key="frame" x="32" y="84" width="311" height="21"/>
+                                <rect key="frame" x="32" y="128" width="311" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPD-QB-llT">
-                                <rect key="frame" x="164.5" y="137" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="181" width="46" height="30"/>
                                 <state key="normal" title="Retour"/>
                                 <connections>
                                     <segue destination="4Jg-4T-GgU" kind="unwind" unwindAction="unwindToWelcomeWithSender:" id="Edg-kr-HpU"/>
@@ -764,12 +784,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUt-Sb-Fza" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4Jg-4T-GgU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4250" y="32"/>
+            <point key="canvasLocation" x="5073" y="32"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qsy-v9-Uow">
+            <objects>
+                <viewController storyboardIdentifier="RegisterUnavailable" id="Let-wD-Vi6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2fV-QE-sKj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pas encore disponible !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qv-xL-M9i">
+                                <rect key="frame" x="32" y="148" width="311" height="28"/>
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgB-o2-CHd">
+                                <rect key="frame" x="163.5" y="208" width="47" height="30"/>
+                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="18"/>
+                                <state key="normal" title="Retour"/>
+                                <connections>
+                                    <segue destination="UJN-sX-M79" kind="unwind" unwindAction="unwindToWelcomeWithSender:" id="YzF-4D-2WI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rgB-o2-CHd" firstAttribute="top" secondItem="6qv-xL-M9i" secondAttribute="bottom" constant="32" id="4a0-cX-rWA"/>
+                            <constraint firstItem="6qv-xL-M9i" firstAttribute="leading" secondItem="WPl-3W-eCh" secondAttribute="leading" constant="32" id="Fsk-eq-vZx"/>
+                            <constraint firstItem="rgB-o2-CHd" firstAttribute="centerX" secondItem="2fV-QE-sKj" secondAttribute="centerX" id="Sct-zn-gLf"/>
+                            <constraint firstItem="6qv-xL-M9i" firstAttribute="top" secondItem="WPl-3W-eCh" secondAttribute="top" constant="128" id="Xwr-Ob-WBF"/>
+                            <constraint firstItem="WPl-3W-eCh" firstAttribute="trailing" secondItem="6qv-xL-M9i" secondAttribute="trailing" constant="32" id="tVn-td-dpm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WPl-3W-eCh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Li-5T-IGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UJN-sX-M79" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="45A-Id-7vN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ytr-DF-66c" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RegisterAuPair" automaticallyAdjustsScrollViewInsets="NO" id="Ytr-DF-66c" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SWf-hB-ste">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -782,7 +841,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlK-wa-aT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988.79999999999995" y="32.383808095952027"/>
+            <point key="canvasLocation" x="1814" y="32"/>
         </scene>
     </scenes>
     <resources>
@@ -796,7 +855,4 @@
         <image name="paperplane" width="137" height="99"/>
         <image name="profile" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Ehv-F7-Sdy"/>
-    </inferredMetricsTieBreakers>
 </document>
