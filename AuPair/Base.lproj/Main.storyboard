@@ -190,7 +190,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="pUq-U9-kOK" secondAttribute="trailing" constant="32" id="2sB-LN-OKb"/>
                                             <constraint firstItem="ln0-fe-PI7" firstAttribute="top" secondItem="f26-yI-7c4" secondAttribute="top" constant="128" id="4rn-bu-Riq"/>
@@ -225,7 +225,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="DCw-hX-wJb" firstAttribute="leading" secondItem="eiT-Lj-EVF" secondAttribute="leading" id="8nb-Qd-TBt"/>
                             <constraint firstItem="DCw-hX-wJb" firstAttribute="top" secondItem="eiT-Lj-EVF" secondAttribute="top" id="WZ9-py-7eS"/>
@@ -432,7 +432,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GhR-s6-FwC" firstAttribute="top" secondItem="XV6-Sy-9BG" secondAttribute="bottom" constant="20" id="2j7-Fa-kq5"/>
                             <constraint firstItem="jqk-YQ-jg0" firstAttribute="bottom" secondItem="GhR-s6-FwC" secondAttribute="bottom" constant="20" id="6Xq-GS-FXf"/>
@@ -473,8 +473,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xmm-vL-Zib">
+                                <rect key="frame" x="125.5" y="36" width="124.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qzm-7t-hSt"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xmm-vL-Zib" firstAttribute="width" secondItem="xmm-vL-Zib" secondAttribute="height" multiplier="83:20" id="0SB-fB-qdz"/>
+                            <constraint firstItem="xmm-vL-Zib" firstAttribute="centerX" secondItem="qZj-pu-mCs" secondAttribute="centerX" id="MoD-Hb-P2W"/>
+                            <constraint firstItem="xmm-vL-Zib" firstAttribute="top" secondItem="CcK-j2-sez" secondAttribute="top" constant="16" id="d1y-Zx-ot4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CcK-j2-sez"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="chat" id="PrZ-E5-ya4">
@@ -486,34 +497,67 @@
             </objects>
             <point key="canvasLocation" x="1761" y="2298"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile Controller-->
         <scene sceneID="gaF-CV-p5M">
             <objects>
-                <viewController id="g6x-fk-u4H" sceneMemberID="viewController">
+                <viewController id="g6x-fk-u4H" customClass="ProfileController" customModule="AuPair" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hOU-RK-9mG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bientôt disponible !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VML-EL-lrY">
-                                <rect key="frame" x="32" y="148" width="311" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil bientôt disponible !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VML-EL-lrY">
+                                <rect key="frame" x="32" y="130" width="311" height="28"/>
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yGD-eK-p6J">
+                                <rect key="frame" x="125" y="36" width="124.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yGD-eK-p6J" secondAttribute="height" multiplier="83:20" id="hPX-bt-5Fz"/>
+                                    <constraint firstAttribute="height" constant="30" id="jrp-2S-BDp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lY3-SV-6ZD">
+                                <rect key="frame" x="122" y="190" width="131" height="29"/>
+                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="17"/>
+                                <state key="normal" title="Rafraîchir les cartes"/>
+                                <connections>
+                                    <action selector="tryRefreshCards:" destination="g6x-fk-u4H" eventType="touchUpInside" id="ghk-45-8Ya"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-fA-B6w">
+                                <rect key="frame" x="144" y="235" width="87" height="29"/>
+                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="17"/>
+                                <state key="normal" title="Déconnexion"/>
+                                <connections>
+                                    <action selector="tryLogout:" destination="g6x-fk-u4H" eventType="touchUpInside" id="Df8-J3-Avi"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="VML-EL-lrY" firstAttribute="top" secondItem="nSw-a5-fH0" secondAttribute="top" constant="128" id="1mc-Jl-b7X"/>
                             <constraint firstItem="VML-EL-lrY" firstAttribute="leading" secondItem="nSw-a5-fH0" secondAttribute="leading" constant="32" id="1sP-Gh-xAE"/>
                             <constraint firstItem="nSw-a5-fH0" firstAttribute="trailing" secondItem="VML-EL-lrY" secondAttribute="trailing" constant="32" id="8pE-hi-7gb"/>
+                            <constraint firstItem="VML-EL-lrY" firstAttribute="top" secondItem="yGD-eK-p6J" secondAttribute="bottom" constant="64" id="DQZ-K8-zN6"/>
+                            <constraint firstItem="VNP-fA-B6w" firstAttribute="centerX" secondItem="hOU-RK-9mG" secondAttribute="centerX" id="Vlc-gX-Rca"/>
+                            <constraint firstItem="lY3-SV-6ZD" firstAttribute="centerX" secondItem="hOU-RK-9mG" secondAttribute="centerX" id="WLo-H7-1Tf"/>
+                            <constraint firstItem="yGD-eK-p6J" firstAttribute="centerX" secondItem="hOU-RK-9mG" secondAttribute="centerX" id="cdy-iD-LPH"/>
+                            <constraint firstItem="VNP-fA-B6w" firstAttribute="top" secondItem="lY3-SV-6ZD" secondAttribute="bottom" constant="16" id="csy-4K-UhM"/>
+                            <constraint firstItem="lY3-SV-6ZD" firstAttribute="top" secondItem="VML-EL-lrY" secondAttribute="bottom" constant="32" id="sSM-qQ-Oxj"/>
+                            <constraint firstItem="yGD-eK-p6J" firstAttribute="top" secondItem="nSw-a5-fH0" secondAttribute="top" constant="16" id="xjh-EF-TwF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nSw-a5-fH0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="profile" id="wwc-X6-YjY">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
+                    <connections>
+                        <segue destination="Rup-GV-0rv" kind="unwind" identifier="unwindToWelcome" unwindAction="unwindToWelcomeWithSender:" id="Fgm-du-nya"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzV-14-spA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Rup-GV-0rv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1761" y="845"/>
         </scene>
@@ -525,6 +569,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.46274509803921571" green="0.75686274509803919" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="g6x-fk-u4H" kind="relationship" relationship="viewControllers" id="RXE-Uk-tcB"/>
@@ -809,7 +855,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rgB-o2-CHd" firstAttribute="top" secondItem="6qv-xL-M9i" secondAttribute="bottom" constant="32" id="4a0-cX-rWA"/>
                             <constraint firstItem="6qv-xL-M9i" firstAttribute="leading" secondItem="WPl-3W-eCh" secondAttribute="leading" constant="32" id="Fsk-eq-vZx"/>

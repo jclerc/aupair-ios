@@ -15,6 +15,7 @@
 		AB8A01C51FE7FEE600B02519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8A01C41FE7FEE600B02519 /* Assets.xcassets */; };
 		AB8A01C81FE7FEE600B02519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A01C61FE7FEE600B02519 /* LaunchScreen.storyboard */; };
 		AB8A01D31FE7FEE600B02519 /* AuPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A01D21FE7FEE600B02519 /* AuPairTests.swift */; };
+		AB92A3D51FEC764E008C3D00 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB92A3D41FEC764E008C3D00 /* ProfileController.swift */; };
 		ABF9086A1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
 		ABF9086B1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
 		ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9086D1FE82A0A00446C9A /* LoginController.swift */; };
@@ -55,6 +56,7 @@
 		AB8A01CE1FE7FEE600B02519 /* AuPairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuPairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8A01D21FE7FEE600B02519 /* AuPairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuPairTests.swift; sourceTree = "<group>"; };
 		AB8A01D41FE7FEE600B02519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB92A3D41FEC764E008C3D00 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		ABF908691FE8209100446C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABF9086D1FE82A0A00446C9A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		ABF9087F1FEABB8D00446C9A /* Bariol_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Bold.otf; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				ABF9086D1FE82A0A00446C9A /* LoginController.swift */,
 				ABF908831FEAD93F00446C9A /* TabBarController.swift */,
 				ABF908851FEADD2600446C9A /* HomeController.swift */,
+				AB92A3D41FEC764E008C3D00 /* ProfileController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */,
 				AB8A01BE1FE7FEE600B02519 /* AppDelegate.swift in Sources */,
 				ABF908861FEADD2600446C9A /* HomeController.swift in Sources */,
+				AB92A3D51FEC764E008C3D00 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
