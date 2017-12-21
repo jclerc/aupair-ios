@@ -23,6 +23,10 @@
 		ABF908821FEABC1F00446C9A /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABF908811FEABC1E00446C9A /* Bariol_Regular.otf */; };
 		ABF908841FEAD93F00446C9A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908831FEAD93F00446C9A /* TabBarController.swift */; };
 		ABF908861FEADD2600446C9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF908851FEADD2600446C9A /* HomeController.swift */; };
+		ABF9088A1FEBD38700446C9A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF908891FEBD38700446C9A /* OverlayView.xib */; };
+		ABF9088C1FEBE1E400446C9A /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9088B1FEBE1E400446C9A /* CustomOverlayView.swift */; };
+		ABF9088E1FEBF59600446C9A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9088D1FEBF59600446C9A /* CardView.swift */; };
+		ABF908921FEBF91C00446C9A /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF908911FEBF91C00446C9A /* CardView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		ABF908811FEABC1E00446C9A /* Bariol_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular.otf; sourceTree = "<group>"; };
 		ABF908831FEAD93F00446C9A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		ABF908851FEADD2600446C9A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		ABF908891FEBD38700446C9A /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		ABF9088B1FEBE1E400446C9A /* CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
+		ABF9088D1FEBF59600446C9A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		ABF908911FEBF91C00446C9A /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		BA5F45C00B9D0C862ABDF366 /* Pods-AuPair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuPair.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuPair/Pods-AuPair.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +120,7 @@
 		AB8A01BC1FE7FEE600B02519 /* AuPair */ = {
 			isa = PBXGroup;
 			children = (
+				ABF908881FEBD35B00446C9A /* Koloda */,
 				ABF9087E1FEAB9D300446C9A /* Fonts */,
 				AB8A01BD1FE7FEE600B02519 /* AppDelegate.swift */,
 				ABF9086C1FE8291D00446C9A /* Controllers */,
@@ -151,6 +160,17 @@
 				ABF908811FEABC1E00446C9A /* Bariol_Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		ABF908881FEBD35B00446C9A /* Koloda */ = {
+			isa = PBXGroup;
+			children = (
+				ABF908891FEBD38700446C9A /* OverlayView.xib */,
+				ABF9088B1FEBE1E400446C9A /* CustomOverlayView.swift */,
+				ABF9088D1FEBF59600446C9A /* CardView.swift */,
+				ABF908911FEBF91C00446C9A /* CardView.xib */,
+			);
+			path = Koloda;
 			sourceTree = "<group>";
 		};
 		B672AC032675F6084F5D845C /* Pods */ = {
@@ -253,7 +273,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF9088A1FEBD38700446C9A /* OverlayView.xib in Resources */,
 				AB8A01C81FE7FEE600B02519 /* LaunchScreen.storyboard in Resources */,
+				ABF908921FEBF91C00446C9A /* CardView.xib in Resources */,
 				ABF9086A1FE8209200446C9A /* GoogleService-Info.plist in Resources */,
 				AB8A01C51FE7FEE600B02519 /* Assets.xcassets in Resources */,
 				ABF908821FEABC1F00446C9A /* Bariol_Regular.otf in Resources */,
@@ -393,8 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF9088E1FEBF59600446C9A /* CardView.swift in Sources */,
 				AB8A01C01FE7FEE600B02519 /* WelcomeController.swift in Sources */,
 				ABF908841FEAD93F00446C9A /* TabBarController.swift in Sources */,
+				ABF9088C1FEBE1E400446C9A /* CustomOverlayView.swift in Sources */,
 				ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */,
 				AB8A01BE1FE7FEE600B02519 /* AppDelegate.swift in Sources */,
 				ABF908861FEADD2600446C9A /* HomeController.swift in Sources */,

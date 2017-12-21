@@ -7,23 +7,77 @@
 //
 
 import UIKit
+import Koloda
 
 class HomeController: UIViewController {
+    @IBOutlet weak var kolodaView: KolodaView!
 
+    var images = [UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        images.append(UIImage(named: "logo")!)
+        images.append(UIImage(named: "paperplane")!)
+        images.append(UIImage(named: "logo")!)
+        images.append(UIImage(named: "paperplane")!)
+        images.append(UIImage(named: "logo")!)
+        images.append(UIImage(named: "paperplane")!)
+        print("HomeController#viewDidLoad / img: \(images.count)")
+        
+        kolodaView.dataSource = self
+        kolodaView.delegate = self
+        
+        kolodaView.layer.zPosition = 1
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+extension HomeController: KolodaViewDelegate {
+    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+        koloda.reloadData()
+        print("KolodaViewDelegate#kolodaDidRunOutOfCards")
+    }
+    
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+//        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
+        print("KolodaViewDelegate#koloda, didSelectCartAt")
+    }
+}
+
+extension HomeController: KolodaViewDataSource {
+    
+    func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
+        print("KolodaViewDataSource#kolodaNumberOfCards / \(images.count)")
+        return images.count
+    }
+    
+    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
+        print("KolodaViewDataSource#kolodaSpeedThatCardShouldDrag")
+        return .fast
+    }
+    
+    func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
+        print("KolodaViewDataSource#koloda, viewForCardAt / \(index < images.count ? "ok" : "empty")")
+
+        let view = (Bundle.main.loadNibNamed("CardView", owner: self, options: nil)![0] as? CardView)!
+//        let view =
+        view.image = images[index]
+        
+        view.label.text = "\(index)"
+        
+        return view
+    }
+    
+    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+        print("KolodaViewDataSource#koloda, viewForCardOverlayAt")
+        let x = Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)![0] as? OverlayView
+        if x != nil {
+            print("-> ok")
+        } else {
+            print("-> empty")
+        }
+        return x
+    }
+}
+

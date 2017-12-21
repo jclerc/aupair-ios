@@ -400,20 +400,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsM-FF-4g8">
-                                <rect key="frame" x="166" y="291" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhR-s6-FwC" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="32" y="120" width="311" height="478"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4QK-Nq-6kk">
+                                <rect key="frame" x="125.5" y="36" width="124.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FaA-NB-oVi"/>
+                                    <constraint firstAttribute="width" secondItem="4QK-Nq-6kk" secondAttribute="height" multiplier="83:20" id="Mir-Gp-tNu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ces familles sont faites pour toi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV6-Sy-9BG">
+                                <rect key="frame" x="32" y="82" width="311" height="18"/>
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GhR-s6-FwC" firstAttribute="top" secondItem="XV6-Sy-9BG" secondAttribute="bottom" constant="20" id="2j7-Fa-kq5"/>
+                            <constraint firstItem="jqk-YQ-jg0" firstAttribute="bottom" secondItem="GhR-s6-FwC" secondAttribute="bottom" constant="20" id="6Xq-GS-FXf"/>
+                            <constraint firstItem="XV6-Sy-9BG" firstAttribute="leading" secondItem="jqk-YQ-jg0" secondAttribute="leading" constant="32" id="7QD-8f-fVB"/>
+                            <constraint firstItem="jqk-YQ-jg0" firstAttribute="trailing" secondItem="XV6-Sy-9BG" secondAttribute="trailing" constant="32" id="fKv-6d-vKw"/>
+                            <constraint firstItem="XV6-Sy-9BG" firstAttribute="top" secondItem="4QK-Nq-6kk" secondAttribute="bottom" constant="16" id="fop-T4-AG3"/>
+                            <constraint firstItem="GhR-s6-FwC" firstAttribute="leading" secondItem="jqk-YQ-jg0" secondAttribute="leading" constant="32" id="saM-Pd-meY"/>
+                            <constraint firstItem="4QK-Nq-6kk" firstAttribute="centerX" secondItem="xWe-eM-0zs" secondAttribute="centerX" id="u8Q-vx-mHE"/>
+                            <constraint firstItem="4QK-Nq-6kk" firstAttribute="top" secondItem="jqk-YQ-jg0" secondAttribute="top" constant="16" id="w1x-Ju-Fyt"/>
+                            <constraint firstItem="jqk-YQ-jg0" firstAttribute="trailing" secondItem="GhR-s6-FwC" secondAttribute="trailing" constant="32" id="y2y-UO-diT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jqk-YQ-jg0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="home" id="0Fq-W8-ozy">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="kolodaView" destination="GhR-s6-FwC" id="lfF-Ct-1dB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3T-Yx-DiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
