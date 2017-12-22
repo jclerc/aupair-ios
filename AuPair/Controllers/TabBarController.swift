@@ -12,6 +12,11 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: -1)
+        tabBar.layer.shadowColor = UIColor.gray.cgColor
+        tabBar.layer.shadowRadius = 4
+        tabBar.layer.shadowOpacity = 0.3
     }
 
 }

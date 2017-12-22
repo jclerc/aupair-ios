@@ -402,10 +402,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhR-s6-FwC" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="32" y="120" width="311" height="478"/>
+                                <rect key="frame" x="32" y="116" width="311" height="482"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chargement..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvs-Zf-WgT">
-                                        <rect key="frame" x="32" y="228.5" width="247" height="21"/>
+                                        <rect key="frame" x="32" y="231.5" width="247" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -425,22 +425,33 @@
                                     <constraint firstAttribute="width" secondItem="4QK-Nq-6kk" secondAttribute="height" multiplier="83:20" id="Mir-Gp-tNu"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ces familles sont faites pour toi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV6-Sy-9BG">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaC-P3-SpN">
                                 <rect key="frame" x="32" y="82" width="311" height="18"/>
-                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ces familles sont faites pour toi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV6-Sy-9BG">
+                                        <rect key="frame" x="0.0" y="0.0" width="227" height="18"/>
+                                        <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1/?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g98-96-w92">
+                                        <rect key="frame" x="227" y="0.0" width="84" height="18"/>
+                                        <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="GhR-s6-FwC" firstAttribute="top" secondItem="XV6-Sy-9BG" secondAttribute="bottom" constant="20" id="2j7-Fa-kq5"/>
                             <constraint firstItem="jqk-YQ-jg0" firstAttribute="bottom" secondItem="GhR-s6-FwC" secondAttribute="bottom" constant="20" id="6Xq-GS-FXf"/>
-                            <constraint firstItem="XV6-Sy-9BG" firstAttribute="leading" secondItem="jqk-YQ-jg0" secondAttribute="leading" constant="32" id="7QD-8f-fVB"/>
-                            <constraint firstItem="jqk-YQ-jg0" firstAttribute="trailing" secondItem="XV6-Sy-9BG" secondAttribute="trailing" constant="32" id="fKv-6d-vKw"/>
-                            <constraint firstItem="XV6-Sy-9BG" firstAttribute="top" secondItem="4QK-Nq-6kk" secondAttribute="bottom" constant="16" id="fop-T4-AG3"/>
+                            <constraint firstItem="jqk-YQ-jg0" firstAttribute="trailing" secondItem="VaC-P3-SpN" secondAttribute="trailing" constant="32" id="Gbj-8O-Mql"/>
+                            <constraint firstItem="VaC-P3-SpN" firstAttribute="leading" secondItem="jqk-YQ-jg0" secondAttribute="leading" constant="32" id="Re9-US-q6p"/>
+                            <constraint firstItem="VaC-P3-SpN" firstAttribute="top" secondItem="4QK-Nq-6kk" secondAttribute="bottom" constant="16" id="kWd-Fw-G5X"/>
                             <constraint firstItem="GhR-s6-FwC" firstAttribute="leading" secondItem="jqk-YQ-jg0" secondAttribute="leading" constant="32" id="saM-Pd-meY"/>
                             <constraint firstItem="4QK-Nq-6kk" firstAttribute="centerX" secondItem="xWe-eM-0zs" secondAttribute="centerX" id="u8Q-vx-mHE"/>
+                            <constraint firstItem="GhR-s6-FwC" firstAttribute="top" secondItem="VaC-P3-SpN" secondAttribute="bottom" constant="16" id="v7h-uV-dvn"/>
                             <constraint firstItem="4QK-Nq-6kk" firstAttribute="top" secondItem="jqk-YQ-jg0" secondAttribute="top" constant="16" id="w1x-Ju-Fyt"/>
                             <constraint firstItem="jqk-YQ-jg0" firstAttribute="trailing" secondItem="GhR-s6-FwC" secondAttribute="trailing" constant="32" id="y2y-UO-diT"/>
                         </constraints>
@@ -450,13 +461,14 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="amountLabel" destination="g98-96-w92" id="0Jn-Vc-6yu"/>
                         <outlet property="kolodaLabel" destination="Nvs-Zf-WgT" id="WXm-GK-HIC"/>
                         <outlet property="kolodaView" destination="GhR-s6-FwC" id="lfF-Ct-1dB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3T-Yx-DiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="1580"/>
+            <point key="canvasLocation" x="1760.8" y="1579.1604197901052"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gwR-bE-0J6">
@@ -893,12 +905,12 @@
     <resources>
         <image name="arrow-back" width="24" height="18"/>
         <image name="button-next" width="75" height="75"/>
-        <image name="chat" width="25" height="25"/>
+        <image name="chat" width="37" height="37"/>
         <image name="gradient-aupair" width="240" height="60"/>
         <image name="gradient-family" width="240" height="60"/>
-        <image name="home" width="25" height="25"/>
+        <image name="home" width="37" height="37"/>
         <image name="logo" width="1660" height="400"/>
         <image name="paperplane" width="137" height="99"/>
-        <image name="profile" width="25" height="25"/>
+        <image name="profile" width="37" height="37"/>
     </resources>
 </document>

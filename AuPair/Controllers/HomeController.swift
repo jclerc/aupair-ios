@@ -18,6 +18,7 @@ class HomeController: UIViewController {
     var cards = [[String: Any]]()
     @IBOutlet weak var kolodaView: KolodaView!
     @IBOutlet weak var kolodaLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class HomeController: UIViewController {
         kolodaView.dataSource = self
         kolodaView.delegate = self
         kolodaView.layer.zPosition = 1
-        kolodaView.countOfVisibleCards = 2
+        kolodaView.countOfVisibleCards = 3
     }
     
     private func fetchData() {
@@ -72,6 +73,16 @@ extension HomeController: KolodaViewDelegate {
                 "family_location": location ?? "none"
             ])
         }
+    }
+    
+    // update index
+    func koloda(_ koloda: KolodaView, didShowCardAt index: Int) {
+        amountLabel.text = "\(index + 1)/\(cards.count)"
+    }
+    
+    // no transparency
+    func kolodaShouldTransparentizeNextCard(_ koloda: KolodaView) -> Bool {
+        return false
     }
 }
 
