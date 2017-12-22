@@ -20,6 +20,7 @@
 		AB92A3DA1FEC8AF9008C3D00 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB92A3D91FEC8AF9008C3D00 /* ChatController.swift */; };
 		AB92A3DC1FEC985E008C3D00 /* ChatDiscussionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB92A3DB1FEC985E008C3D00 /* ChatDiscussionCell.swift */; };
 		AB92A3DE1FECADE3008C3D00 /* DiscussionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB92A3DD1FECADE3008C3D00 /* DiscussionController.swift */; };
+		AB92A3E21FECB7D0008C3D00 /* GoogleService-Info.production.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB92A3E11FECB7D0008C3D00 /* GoogleService-Info.production.plist */; };
 		ABF9086A1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
 		ABF9086B1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
 		ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9086D1FE82A0A00446C9A /* LoginController.swift */; };
@@ -65,6 +66,7 @@
 		AB92A3D91FEC8AF9008C3D00 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		AB92A3DB1FEC985E008C3D00 /* ChatDiscussionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDiscussionCell.swift; sourceTree = "<group>"; };
 		AB92A3DD1FECADE3008C3D00 /* DiscussionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionController.swift; sourceTree = "<group>"; };
+		AB92A3E11FECB7D0008C3D00 /* GoogleService-Info.production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.production.plist"; sourceTree = "<group>"; };
 		ABF908691FE8209100446C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABF9086D1FE82A0A00446C9A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		ABF9087F1FEABB8D00446C9A /* Bariol_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Bold.otf; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				AB8A01C61FE7FEE600B02519 /* LaunchScreen.storyboard */,
 				AB8A01C91FE7FEE600B02519 /* Info.plist */,
 				ABF908691FE8209100446C9A /* GoogleService-Info.plist */,
+				AB92A3E11FECB7D0008C3D00 /* GoogleService-Info.production.plist */,
 			);
 			path = AuPair;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				AB8A01C81FE7FEE600B02519 /* LaunchScreen.storyboard in Resources */,
 				ABF908921FEBF91C00446C9A /* CardView.xib in Resources */,
 				ABF9086A1FE8209200446C9A /* GoogleService-Info.plist in Resources */,
+				AB92A3E21FECB7D0008C3D00 /* GoogleService-Info.production.plist in Resources */,
 				AB8A01C51FE7FEE600B02519 /* Assets.xcassets in Resources */,
 				ABF908821FEABC1F00446C9A /* Bariol_Regular.otf in Resources */,
 				AB8A01C31FE7FEE600B02519 /* Main.storyboard in Resources */,
