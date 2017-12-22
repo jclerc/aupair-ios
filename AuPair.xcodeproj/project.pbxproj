@@ -16,6 +16,10 @@
 		AB8A01C81FE7FEE600B02519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8A01C61FE7FEE600B02519 /* LaunchScreen.storyboard */; };
 		AB8A01D31FE7FEE600B02519 /* AuPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A01D21FE7FEE600B02519 /* AuPairTests.swift */; };
 		AB92A3D51FEC764E008C3D00 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB92A3D41FEC764E008C3D00 /* ProfileController.swift */; };
+		AB92A3D81FEC8990008C3D00 /* ChatPushCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB92A3D71FEC8990008C3D00 /* ChatPushCell.swift */; };
+		AB92A3DA1FEC8AF9008C3D00 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB92A3D91FEC8AF9008C3D00 /* ChatController.swift */; };
+		AB92A3DC1FEC985E008C3D00 /* ChatDiscussionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB92A3DB1FEC985E008C3D00 /* ChatDiscussionCell.swift */; };
+		AB92A3DE1FECADE3008C3D00 /* DiscussionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB92A3DD1FECADE3008C3D00 /* DiscussionController.swift */; };
 		ABF9086A1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
 		ABF9086B1FE8209200446C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF908691FE8209100446C9A /* GoogleService-Info.plist */; };
 		ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9086D1FE82A0A00446C9A /* LoginController.swift */; };
@@ -57,6 +61,10 @@
 		AB8A01D21FE7FEE600B02519 /* AuPairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuPairTests.swift; sourceTree = "<group>"; };
 		AB8A01D41FE7FEE600B02519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB92A3D41FEC764E008C3D00 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		AB92A3D71FEC8990008C3D00 /* ChatPushCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPushCell.swift; sourceTree = "<group>"; };
+		AB92A3D91FEC8AF9008C3D00 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		AB92A3DB1FEC985E008C3D00 /* ChatDiscussionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDiscussionCell.swift; sourceTree = "<group>"; };
+		AB92A3DD1FECADE3008C3D00 /* DiscussionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionController.swift; sourceTree = "<group>"; };
 		ABF908691FE8209100446C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABF9086D1FE82A0A00446C9A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		ABF9087F1FEABB8D00446C9A /* Bariol_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Bold.otf; sourceTree = "<group>"; };
@@ -122,6 +130,7 @@
 		AB8A01BC1FE7FEE600B02519 /* AuPair */ = {
 			isa = PBXGroup;
 			children = (
+				AB92A3D61FEC8972008C3D00 /* Cells */,
 				ABF908881FEBD35B00446C9A /* Koloda */,
 				ABF9087E1FEAB9D300446C9A /* Fonts */,
 				AB8A01BD1FE7FEE600B02519 /* AppDelegate.swift */,
@@ -144,6 +153,15 @@
 			path = AuPairTests;
 			sourceTree = "<group>";
 		};
+		AB92A3D61FEC8972008C3D00 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AB92A3D71FEC8990008C3D00 /* ChatPushCell.swift */,
+				AB92A3DB1FEC985E008C3D00 /* ChatDiscussionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		ABF9086C1FE8291D00446C9A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +170,8 @@
 				ABF908831FEAD93F00446C9A /* TabBarController.swift */,
 				ABF908851FEADD2600446C9A /* HomeController.swift */,
 				AB92A3D41FEC764E008C3D00 /* ProfileController.swift */,
+				AB92A3D91FEC8AF9008C3D00 /* ChatController.swift */,
+				AB92A3DD1FECADE3008C3D00 /* DiscussionController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -421,11 +441,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF9088E1FEBF59600446C9A /* CardView.swift in Sources */,
+				AB92A3DC1FEC985E008C3D00 /* ChatDiscussionCell.swift in Sources */,
 				AB8A01C01FE7FEE600B02519 /* WelcomeController.swift in Sources */,
+				AB92A3D81FEC8990008C3D00 /* ChatPushCell.swift in Sources */,
+				AB92A3DA1FEC8AF9008C3D00 /* ChatController.swift in Sources */,
 				ABF908841FEAD93F00446C9A /* TabBarController.swift in Sources */,
 				ABF9088C1FEBE1E400446C9A /* CustomOverlayView.swift in Sources */,
 				ABF9086E1FE82A0A00446C9A /* LoginController.swift in Sources */,
 				AB8A01BE1FE7FEE600B02519 /* AppDelegate.swift in Sources */,
+				AB92A3DE1FECADE3008C3D00 /* DiscussionController.swift in Sources */,
 				ABF908861FEADD2600446C9A /* HomeController.swift in Sources */,
 				AB92A3D51FEC764E008C3D00 /* ProfileController.swift in Sources */,
 			);
